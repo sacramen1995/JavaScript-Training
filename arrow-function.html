@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Arrow Function</title>
+        <script>
+            /*let add=function(n1,n2){
+                return n1+n2;
+            };
+            
+            console.log(add(3,4));
+            */
+            /*let add=(n1,n2)=>{
+
+                return n1+n2;
+            };
+            console.log(add(3,4));
+            */
+            /*let add=(n1,n2)=>(n1+n2);
+            console.log(add(3,4));
+            //箭頭函式和普通函式的差別
+            //箭頭函式沒有自己的綁定物件 this
+            /*document.addEventListener("click",function(){
+                console.log(this);//document
+                window.setTimeout(()=>{
+                    console.log(this);
+                    this.body.innerHtml="Hello";
+                },3000);
+            });
+
+            /*
+            let obj={
+                x:3,
+                show:function(){
+                    console.log(this.x);
+                }
+            }
+            obj.show();
+            */
+
+            function add(...ns){
+                console.log(ns);
+                let sum=0;
+                for(let i=0;i<ns.length;i++){
+                    sum=sum+ns[i];
+                }
+                console.log(sum);
+            }
+            add(3,5,3,8);
+            add(2,3);
+        </script>
+    </head>    
+</body>
+</html>
