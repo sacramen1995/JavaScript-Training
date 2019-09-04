@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Scheduling</title>
+        <style>
+            
+        </style>
+    </head>
+<body>
+   <h3>Count Down</h3>
+   <span id="timer">3</span>
+    <script>
+       let timer=document.getElementById("timer");
+       let countdown=function(){
+           timer.innerHTML=timer.innerHTML-1;
+           if(timer.innerHTML>0){//繼續倒數
+            //window.setTimeout(countdown,1000);
+           }else{//倒數完畢
+            //window.location="https://www.google.com/";
+            alert("Happy New Year!!");
+            window.clearInterval(intervalId)//排程編號
+           }
+       };
+       //window.setTimeout(countdown,1000);
+       let intervalId=window.setInterval(countdown,1000);
+       
+    </script>
+</body>
+</html>
